@@ -4,6 +4,7 @@
 *{
     font-family: 'Amatic SC', cursive;
 }
+
 body{
     background-image: url(images/backgroundSkyline.png);
     background-repeat: no-repeat;
@@ -147,8 +148,8 @@ body{
 /* Walking animation for persons   */
 @keyframes walkAnimPerson1{
     0%{
-        left: -430;
-        bottom: 30px;
+        left: 0;
+        bottom: 50px;
     }
     25%{
         left: 200px;
