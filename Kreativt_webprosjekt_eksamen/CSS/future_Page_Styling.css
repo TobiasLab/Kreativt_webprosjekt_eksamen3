@@ -17,7 +17,6 @@ body{
     border-radius: 50%;
     animation-name: moonCycle;
     animation-duration: 40s;
-    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
@@ -320,7 +319,7 @@ body{
 }
 
 /* HOVER TEXT*/
-/* Hovering over person6, text pops up above said persons head.*/
+/* Hovering over "X" person, text pops up above said persons head.*/
 .person6:hover ~ #allText .person6Text{
     background-color: white;
     display: block;
@@ -345,6 +344,7 @@ body{
     text-align: center;
 }
 
+/* platform 26 sign*/
 .platform26Sign{
     position: absolute;
     height: 80px;
@@ -359,7 +359,7 @@ body{
 }
 
 
-/*      NEED FIX
+/*      NEED FIX NOW!
 .ticketImage:hover ~ #allText .person2Text2{
     background-color: white;    
     display: block;
