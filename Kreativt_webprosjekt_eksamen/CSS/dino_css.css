@@ -1,0 +1,732 @@
+body{
+    background-color: rgb(204, 255, 204);
+    background-image: url(/Images/background_volcanojpg.jpg);
+    background-repeat: no-repeat;
+    margin: 0;
+    width: 1400px;
+    height: 900px;
+    position: absolute;
+    font-family: "arial"; 
+}
+h1{
+    font-family: 'Amatic SC', cursive;
+    font-size: 120px;
+    text-align: center;
+}
+/* Arrows to the other pages under here */
+.arrow{
+    position: absolute;
+    height: 50px;
+}
+#arrow1{
+    top: 30px;
+    left: 30px;
+    transform: rotate(-180deg) rotateX(150deg);
+}
+#arrow2{
+    top: 30px;
+    right: 30px;
+}
+/* clouds moving in the sky under here */
+.clout{
+    position: absolute;
+    height: 200px;
+}
+#cloud1{
+    height: 130px;
+    right: -105px;
+    top: 170px;
+    animation: cloudfly1 40s linear 0s infinite;
+}
+@keyframes cloudfly1{
+    0%{
+        right: -105px;
+    }
+    100%{
+        right: 1600px;
+    }
+}
+#cloud2{
+    height: 90px;
+    right: -90px;
+    top: 100px;
+    animation: cloudfly2 38s linear 0s infinite;
+}
+@keyframes cloudfly2{
+    0%{
+        right: -90px;
+    }
+    100%{
+        right: 1600px;
+    }
+}
+#cloud3{
+    height: 50px;
+    right: -120px;
+    top: 170px;
+    animation: cloudfly3 30s linear 0s infinite;
+}
+@keyframes cloudfly3{
+    0%{
+        right: -120px;
+    }
+    100%{
+        right: 1600px;
+    }
+}
+/* train signal and light flicker */
+#signals{
+    position: absolute;
+    left: 820px;
+    bottom: 0;
+}
+.light{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: rgb(250,20,0);
+    border-radius: 50%;
+    opacity: 0;
+    animation: lighting 1s linear 0s infinite;
+}
+@keyframes lighting{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#light1{
+    left: 61px;
+    top: 22px;
+}
+#light2{
+    top: 22px;
+    left: 149px;
+}
+/* the grass */
+#gress{
+    position: absolute;
+    opacity: ;
+    height: 230px;
+    width: 1400px;
+    bottom: -120px;
+    margin: 0;
+}
+/* all flying dinos under here */
+.dino_fly{
+    position: absolute;
+    width: 140px;
+    top: 0;
+    overflow: hidden;
+}
+#fly1{
+    top: 110px;
+    right: -50px;
+    animation: dinofly1 8s ease infinite;
+}
+@keyframes dinofly1{
+    0%{
+        top: 110px;
+        right: 0px;
+    }
+    100%{
+        top: 250px;
+        right: 1600px;
+    }
+}
+#fly2{
+    top: 120px;
+    right: -50px;
+    animation: dinofly2 7s ease infinite;
+}
+@keyframes dinofly2{
+    0%{
+    }
+    100%{
+        top: 80px;
+        right: 1600px;
+    }
+}
+#fly3{
+    top: 200px;
+    left: 200px;
+    animation: dinofly3 10s linear infinite;
+}
+@keyframes dinofly3{
+    0%{
+        top: 200px;
+        left: 200px;
+    }
+    25%{
+        top: 250px;
+        left: 100px;
+    }
+    50%{
+        top: 250px;
+        left: 150px;
+    }
+    100%{
+        top: 200px;
+        left: 200px;
+    }
+}
+#fly4{
+    top: 60px;
+    right: -50px;
+    animation: dinofly4 9s ease infinite;
+}
+@keyframes dinofly4{
+    100%{
+        top: 180px;
+        right: 1600px;
+    }
+}
+/* first talking bubble */
+#hi{
+    width: 200px;
+    height: 80px;
+    background-color: rgb(250,250,250);
+    position: absolute;
+    left: 30px;
+    border: 1px black solid;
+    border-radius: 30%;
+    bottom: 300px;
+    opacity: 1;
+    text-align: center;
+    font-size: 20px;
+}
+/* dino appearing and talkinf under here */
+#tall_dino{
+    position: absolute;
+    height: 230px;
+    bottom: 60px;
+    left: -150px; 
+    opacity: 0;
+    animation: dinoappear 6s ease-in-out 1s backwards;    
+}
+@keyframes dinoappear{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        left: -30px;
+        opacity: 1;
+        transform: rotate(40deg);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* first appearing talkingbubble here */
+#yesplease {
+    width: 130px;
+    height: 50px;
+    bottom: 180px;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    left: 90px;
+    border: 1px black solid;
+    border-radius: 30%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    animation: yestalk 10s ease 3s;
+}
+@keyframes yestalk{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* moving tall dino under here */
+#tall_dinodino{
+    position: absolute;
+    height: 230px;
+    left: -120px;
+    bottom: 0;
+    opacity: 1;
+    animation: dinowalk 5s linear 7s;
+    animation-fill-mode: forwards;
+}
+@keyframes dinowalk{
+    0%{
+        left: -120px;
+        bottom: 0;
+    }
+    100%{
+        left: 800px;
+        opacity: 1;
+    }
+}
+/* footprints appearing under here */
+.footprint{
+    position: absolute;
+    height: 80px;
+    bottom: 10px;
+    transform: rotate(80deg);
+    opacity: 1;
+}
+#foot1{
+    left: 60px;
+    opacity: 0;
+    animation: fot1 1s ease 8s;
+}
+@keyframes fot1{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#foot2{
+    left: 200px;
+    opacity: 0;
+    animation: fot2 1s ease 9s;
+}
+@keyframes fot2{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#foot3{
+    left: 450px;
+    opacity: 0;
+    animation: fot3 1s ease 10s;
+}
+@keyframes fot3{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#foot4{
+    left: 700px;
+    opacity: 0;
+    animation: fot4 1s ease 12s;
+}
+@keyframes fot4{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* two other dinos appearing to catch the train */
+#dino2{
+    position: absolute;
+    right: -300px;
+    bottom: 0;
+    opacity: 0;
+    animation: eatmove 10s ease-out 10s backwards;
+}
+#dino3{
+    position: absolute;
+    right: -200px;
+    bottom: 0;
+    opacity: 0;
+    animation: boomove 3s ease 16s;
+}
+#dino_eat{
+    height: 180px;
+
+}
+@keyframes eatmove{
+    0%{
+        right: -300px;
+    }
+    50%{
+        right: 2px;
+        opacity: 1;
+    }
+    60{
+        right: 2px;
+        opacity: 1;
+    }
+    70%{
+        right: 2px;
+        opacity: 1;
+    }
+    80%{
+        right: 2px;
+        opacity: 1;
+    }
+    90%{
+        right: 2px;
+        opacity: 1;
+    }
+    100%{
+        right: 200px;
+        opacity: 1;
+    }
+}
+#dino_boo{
+    height: 140px;
+}
+@keyframes boomove{
+    0%{
+        right:-200px;
+    }
+    80%{
+        right: 300px;
+        opacity: 1;
+    }
+    90%{
+        right: 300px;
+        opacity: 1;
+    }
+    100%{
+        right: 300px;
+        opacity: 1;
+    }
+}
+/* other dinos talkingbubbles */
+#tall_talk{
+    width: 200px;
+    height: 80px;
+    bottom: 250px;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    right: 450px;
+    border: 1px black solid;
+    border-radius: 30%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    animation: talltalkmove 7s ease-in-out 11s;
+}
+@keyframes talltalkmove{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#boo_talk{
+    width: 100px;
+    height: 80px;
+    bottom: 170px;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    right: 300px;
+    border: 1px black solid;
+    border-radius: 30%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    animation: bootalk 3s ease 16s;
+}
+@keyframes bootalk{
+    0%{
+        opacity: 0;
+        right: -100px;
+    }
+    80%{
+        opacity: 1;
+        right: 300px;
+    }
+    100%{
+        opacity: 1;
+        right: 300px;
+    }
+}
+#eat_talk{
+    width: 120px;
+    height: 80px;
+    bottom: 190px;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    right: 100px;
+    border: 1px black solid;
+    border-radius: 30%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    animation: eattalk 8s linear 11s;
+}
+@keyframes eattalk{
+    0%{
+        opacity: 0;
+        right: -100px;
+    }
+    60%{
+        opacity: 1;
+        right: 100px;
+    }
+    100%{
+        opacity: 1;
+        right: 100px;
+    }
+}
+/* moving train under here */
+#train{
+    position: absolute;
+    height: 390px;
+    bottom: -120px;
+    left: -800px;
+    animation: trainmove 6s ease-in-out 16s;
+}
+@keyframes trainmove{
+    0%{
+        
+    }
+    50%{
+        left: 250px;
+    }
+    70%{
+        left: 250px;
+    }
+    80%{
+        left: 250px;
+    }
+    90%{
+        left: 250px;
+    }
+    93%{
+        left: 250px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+/* talking about tickets pop up under here */
+#end_talk{
+    width: 280px;
+    height: 80px;
+    bottom: 240px;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    right: 320px;
+    border: 1px black solid;
+    border-radius: 30%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    animation: endtalk 5s linear 22s;
+}
+@keyframes endtalk{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* portal appearing under here */
+#portal{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation: portalshow 4s ease-in 25s forwards;
+    opacity: 0;
+}
+@keyframes portalshow{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.7;
+    }
+}
+/* talking about portal under here */
+#portal_talk{
+    width: 260px;
+    height: 80px;
+    bottom: 280px;
+    background-color: rgb(250, 250, 250);
+    position: absolute;
+    right: 30px;
+    border: 1px black solid;
+    border-radius: 30%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    opacity: 0;
+    animation: portaltalk 3s linear 27s forwards;
+}
+@keyframes portaltalk{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* coconuts falling under here */
+#deeznuts{
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    left: 450px;
+    top: 520px;
+}
+.coco{
+    position: absolute;
+    height: 40px;
+}
+#nut1{
+    left: 15px;
+    top: 70px; 
+    animation: locococo 1s linear 0s infinite;
+}
+#nut3{
+    left: 47px;
+    top: 70px;
+    animation: locococo 2s linear 0s infinite;
+}
+@keyframes locococo{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+#nut2{
+    position: absolute;
+    left: 28px;
+    top: 48px;
+    animation: cocofall 1s ease-in 0s forwards;
+    animation-play-state: paused;
+}
+#deeznuts:hover #nut2{
+    animation-play-state: running;
+}
+@keyframes cocofall{
+    0%{
+        top: 48px;
+    }
+    100%{
+        top: 370px;
+    }
+}
+/* birdpoop falling undere here */
+#birdpoop{
+    position: absolute;
+    height: 200px;
+    width: 250px;
+    left: 70px;
+}
+#poop{
+    position: absolute;
+    height: 30px;
+    top: 100px;
+    left: 100px;
+    opacity: 0;
+    animation: poopfall 3s ease 0s forwards;
+    animation-play-state: paused;
+}
+#birdpoop:hover #poop{
+    opacity: 1;
+    animation-play-state: running;
+}
+@keyframes poopfall{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        top: 670px;
+    }
+}
+/* hidden santahat and merry christmas bubble under here */
+#christmas{
+    position: absolute;
+    height: 270px;
+    width: 120px;
+    left: 780px;
+    bottom: 10px;
+    opacity: 0;
+}
+#santa{
+    position: absolute;
+    height: 120px;
+    left: 1px;
+    top: 3px;
+}
+#hoho{
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background-color: rgb(250,250,250);
+    border: 1px black solid;
+    border-radius: 30%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    left: -60px;
+    top: 20px;
+}
+#christmas:hover{
+    opacity: 1;
+}
+/* latergater talk under here */
+#latetalk{
+    position: absolute;
+    width: 110px;
+    height: 85px;
+    background-color: rgb(250,250,250);
+    border: 1px black solid;
+    border-radius: 30%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    left: 900px;
+    bottom: 150px;
+    opacity: 0;
+    animation: latergator 2s linear 43s forwards;
+}
+@keyframes latergator{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
