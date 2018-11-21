@@ -1,0 +1,371 @@
+/* Background */
+body{
+    background-image: url(images/backgroundSkyline.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Moon */
+#moon{
+    position: fixed;
+    background-color: whitesmoke;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    animation-name: moonCycle;
+    animation-duration: 40s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* moon animation, follow a linear path*/
+@keyframes moonCycle{
+    0%{
+        left: 50px;
+        top: 20px;
+    }
+    100%{
+        left: 1400px;
+        top: 50px;
+    }
+}
+
+#billboardBox{
+    width: 200px;
+    height: auto;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: 100px;
+    left: 500px;
+}
+
+/* Tickets */
+.ticketImage{
+    position: absolute;
+    height: 15px;
+    width: auto;
+    left: 500px;
+    bottom: 53px;
+    z-index: 3;
+    z-index: 0;
+}
+
+/* Building 1, train repair and food*/
+.restaurantRoomWall{
+    left: 1024px;
+    height: 180px;
+    width: 250px;
+    bottom: 310px;
+    position: absolute;
+    z-index: 2;
+}
+
+.restaurantRoomWall:hover{
+    opacity: 0;
+}
+
+.waitingRoomWindow{
+    left: 1024px;
+    height: 180px;
+    width: 250px;
+    bottom: 310px;
+    position: absolute;
+    z-index: 1;
+}
+
+.destroyedTrain{
+    left: 900px;
+    bottom: 120px;
+    position: absolute;
+    z-index: 2;
+}
+
+.repairRoomWall{
+    left: 900px;
+    height: 180px;
+    width: auto;
+    bottom: 130px;
+    position: absolute;
+    z-index: 2;
+}
+.repairRoom{
+    left: 900px;
+    height: 180px;
+    width: auto;
+    bottom: 130px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+}
+
+.repairRoomWall:hover{
+    opacity: 0;
+}
+
+/* Animation for train1*/
+.train1{
+    left: -330px;
+    bottom: 0px;
+    position: absolute;
+    animation-name: trainMove;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    z-index: 2;
+}
+
+/*Keyframes for trainMove, train moves to the right.*/
+@keyframes trainMove{
+    0%{
+        left: -330px;
+    }
+    25%{
+        left: 30px;
+    }
+    50%{
+        left: 0px;
+    }
+    75%{
+        left: 70px;
+    }
+    100%{
+        left: 1920px;
+    }
+}
+
+/* WALKING ANIMATIONS*/
+/* Walking animation for person1   */
+@keyframes walkAnimPerson1{
+    0%{
+        left: -430;
+        bottom: 30px;
+    }
+    25%{
+        left: 200px;
+        bottom: 50px;
+    }
+    50%{
+        left: 0px;
+        bottom: 50px;
+    }
+    75%{
+        left: 70px;
+        bottom: 20px;        
+    }
+    100%{
+        left: 1920px;
+    }
+}
+
+.person4{
+    animation: walkAnimPerson4;
+    bottom: 0;
+    position: absolute;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    z-index: 1;
+    bottom: 50px;
+}
+
+@keyframes walkAnimPerson4{
+    0%{
+        left: -50px;
+    }
+    25%{
+        left: -50px;
+    }
+    50%{
+        left: -50px;
+    }
+    75%{
+        left: 30px;
+    }
+    100%{
+        left: 1300px;
+    }
+}
+
+#people > img, .person6{
+    width: 50px;
+    height: auto;
+    position: absolute;
+}
+
+.civilianRoof{
+    position: absolute;
+    height: 10px;
+    width: 1920px;
+    bottom: 120px;
+    z-index: 1;
+    background-color: black;
+}
+
+/*    THE METRO: ;*/
+/* waiting platform, the black rectangle/line at the bottom of the page */
+.civilianFloor{
+    position: absolute;
+    height:  50px;
+    width: 1920px;
+    bottom: 0px;
+    background-color: black;
+    z-index: 1;
+}
+
+/* Tunnel, the grey rectangle/line above the black rectangle*/
+.metroTunnel{
+    position: absolute;
+    height:  120px;
+    width: 1920px;
+    bottom: 0px;
+    background-color: slategrey;
+    z-index: 0;
+}
+
+/* Persons*/
+.person6{
+    left: 800px;
+    bottom: 125px;
+    position: absolute;
+}
+
+.person5{
+    position: absolute;
+    left: 700px;
+    bottom: 42px;
+}
+.person4{
+    position: absolute;
+    left: 750;
+    bottom: 42px;
+}
+
+.person4: hover{
+    background-color: aqua;
+}
+
+.person3{
+    position: absolute;
+    left: 300px;
+    bottom: 42px;
+}
+
+.person2{
+    left: 500px;
+    bottom: 50px;
+    position: absolute;
+}
+
+.person1{
+    animation: walkAnimPerson1;
+    bottom: 50px;
+    position: absolute;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+/* TEXT */
+#allText{
+    font-family: cursive;
+    text-align: center;
+    color: black;
+}
+
+/* Text for person6*/
+.person6Text{
+    position: absolute;
+    width: 100px;
+    top: 320px;
+    bottom: auto;
+    left: 780px;
+    display: none;
+}
+
+.person5Text1{
+    position: absolute;
+    left: 650px;
+    bottom: 81px;
+    display: none;
+}
+.person5Text2{
+    position: absolute;
+    left: 650px;
+    bottom: 81px;
+    display: none;
+}
+
+.person3Text{
+    position: absolute;
+    left: 230px;
+    bottom: 80px;
+    display: none;
+}
+
+.person2Text1{
+    position: absolute;
+    left: 50px;
+    bottom: 81px;
+    display: none;
+}
+
+.person2Text2{
+    position: absolute;
+    left: 50px;
+    bottom: 81px;
+    display: none;
+}
+
+/* HOVER TEXT*/
+/* Hovering over person6, text pops up above said persons head.*/
+.person6:hover ~ #allText .person6Text{
+    background-color: white;
+    display: block;
+}
+
+.person5:hover ~ #allText .person5Text1{
+    background-color: white;
+    display: block;
+}
+
+.person3:hover ~ #allText .person3Text{
+    background-color: white;
+    display: block;
+}
+
+.person2:hover ~ #allText .person2Text1{
+    background-color: white;
+    display: block;
+    left: 450px;
+    bottom: 120px;
+    position: absolute;
+    text-align: center;
+}
+
+.platform26Sign{
+    position: absolute;
+    height: 80px;
+    width: auto;
+    left: 1000px;
+    bottom: 60px;
+}
+
+.platform26Sign:hover ~ #allText .person5Text2{
+    background-color: white;
+    display: block;
+}
+
+
+/*      NEED FIX
+.ticketImage:hover ~ #allText .person2Text2{
+    background-color: white;    
+    display: block;
+    left: 450px;
+    bottom: 120px;
+    position: absolute;
+    text-align: center;
+}
+*/
