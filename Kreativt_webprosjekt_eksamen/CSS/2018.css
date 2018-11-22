@@ -104,3 +104,16 @@ body{
         left: 1400px;
     }
 }
+
+.arrow{
+    position: absolute;
+    height: 50px;
+}
+#arrow1{
+    top: 30px;
+    left: 30px;
+    transform: rotate(-180deg) rotateX(150deg);
+}
+#arrow2{
+    top: 30px;
+    right: 30px;
