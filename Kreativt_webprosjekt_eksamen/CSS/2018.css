@@ -1,6 +1,9 @@
+/* Makes all the text on the page "Amatic" font */
 *{
     font-family: 'Amatic SC';
 }
+
+/* Styling for the body */
 body{
     background-color: rgb(222, 222, 222);
     width: 100%;
@@ -10,6 +13,8 @@ body{
     margin-bottom: 18px;
     position: relative;
 }
+
+/* Styling for the white background */
 .background{
     width: 1300px;
     height: 1050px;
@@ -22,19 +27,25 @@ body{
     margin: auto;
     overflow: hidden;
 }
+
+/* Styling for the header */
 .header{
     top: 0;
     width: 100%;
     height: 200px;
     position: absolute;
 }
-#test2{
+
+/* Styling for the text in the header */
+#header1{
     font-size: 5em;
     top: 16%;
     position: absolute;
     width: 100%;
     text-align: center;
 }
+
+/* Styling for all the paragraphs and their positionning */
 #paragraph1{
     position: absolute;
     width: 1200px;
@@ -63,6 +74,8 @@ body{
     top: 550px;
     left: 500px;
 }
+
+/* Picture of a train */
 #osloTrain{
     position: absolute;
     top:620px;
@@ -70,6 +83,8 @@ body{
     width: 400px;
     height: auto;
 }
+
+/* Same train as on the frontpage */
 #frontPageTrain{
     position: absolute;
     bottom: 0px;
@@ -80,6 +95,7 @@ body{
     animation-iteration-count: infinite;
 }
 
+/* Keyframes for the train */
 @keyframes frontPageTrainMove{
     0%{
         left: -1000px;
