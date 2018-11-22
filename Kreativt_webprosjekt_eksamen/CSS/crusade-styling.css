@@ -1,0 +1,120 @@
+*{
+    font-family: 'Amatic SC', cursive;
+}
+
+body{
+    background-color: rgb(255, 255, 255);
+    margin-top: 10%;
+    margin: 0;
+}
+/* Textbubble */
+#bubble{
+    position: absolute;
+    left: 75%;
+    top: 33%;
+    opacity: 0;
+}
+/*Hover on the helmet*/
+#helmet1:hover ~ #bubble{
+    opacity: 1;   
+}
+
+/* Blue background*/
+#sky{
+    background-color: skyblue;
+    height: 50%;
+    position: absolute;
+    top:0%;
+    width: 100%;
+    z-index: -1;
+} 
+/* Green background*/
+#grass{
+    background-color: green;
+    height: 60%;
+    position: absolute;
+    bottom: -10%;
+    width: 100%;
+    z-index: -1;
+}
+/* The crusaders*/
+.crusader{ 
+        position: absolute;
+            bottom: 0;
+           width: 15%;
+           height: 30%;
+        }
+/* The castle*/
+.castle {
+    position: absolute;
+           left: 30%;
+            bottom: 25%;
+           width:40%;
+           height: 70%;
+}
+/* The helmet*/
+.helmet {
+    position: absolute;
+    left: 80%;
+    bottom: 65%;
+    width: 17%;
+    height: 35%;
+}
+
+/* Crusader animations */
+#crusader2{
+            right:100%;
+            animation-name: crusaderMoves; 
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 5s;
+}
+
+#crusader3{ 
+            right:100%;
+            animation-name: crusaderMoves; 
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 7s;
+}   
+
+#crusader4{
+            right:100%;
+            animation-name: crusaderMoves; 
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 9s;
+ }
+  
+#crusader5{
+            right:100%;
+            animation-name: crusaderMoves; 
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 3s;
+ }
+
+#crusader6{
+            right:100%;
+            animation-name: crusaderMoves; 
+            animation-duration: 12s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+ }
+
+/* Crusader moving animation */
+@keyframes crusaderMoves { 
+            0%{
+                right: 0%
+            }
+            100%{
+              right: 120%     
+            }
+}
+
+
