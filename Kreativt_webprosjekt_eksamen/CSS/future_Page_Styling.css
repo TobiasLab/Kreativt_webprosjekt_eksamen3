@@ -1,4 +1,10 @@
 /* Background */
+
+/* All elements uses the Amatic font*/
+*{
+    font-family: 'Amatic SC', cursive;
+}
+
 body{
     background-image: url(images/backgroundSkyline.png);
     background-repeat: no-repeat;
@@ -21,7 +27,7 @@ body{
     animation-iteration-count: infinite;
 }
 
-/* moon animation, follow a linear path*/
+/* moon animation, follows a linear path*/
 @keyframes moonCycle{
     0%{
         left: 50px;
@@ -63,6 +69,7 @@ body{
     z-index: 2;
 }
 
+/* Wall dissapears on hover */
 .restaurantRoomWall:hover{
     opacity: 0;
 }
@@ -101,6 +108,7 @@ body{
     z-index: 1;
 }
 
+/* Wall dissapears on hover */
 .repairRoomWall:hover{
     opacity: 0;
 }
@@ -137,11 +145,11 @@ body{
 }
 
 /* WALKING ANIMATIONS*/
-/* Walking animation for person1   */
+/* Walking animation for persons   */
 @keyframes walkAnimPerson1{
     0%{
-        left: -430;
-        bottom: 30px;
+        left: 0;
+        bottom: 50px;
     }
     25%{
         left: 200px;
@@ -194,6 +202,8 @@ body{
     position: absolute;
 }
 
+/*    THE METRO: ;*/
+/* waiting platform, the black rectangle/line at the bottom of the page */
 .civilianRoof{
     position: absolute;
     height: 10px;
@@ -202,9 +212,6 @@ body{
     z-index: 1;
     background-color: black;
 }
-
-/*    THE METRO: ;*/
-/* waiting platform, the black rectangle/line at the bottom of the page */
 .civilianFloor{
     position: absolute;
     height:  50px;
@@ -242,10 +249,6 @@ body{
     bottom: 42px;
 }
 
-.person4: hover{
-    background-color: aqua;
-}
-
 .person3{
     position: absolute;
     left: 300px;
@@ -275,15 +278,16 @@ body{
     color: black;
 }
 
-/* Text for person6*/
+/* Text for persons*/
 .person6Text{
     position: absolute;
     width: 100px;
-    top: 320px;
+    top: 230px;
     bottom: auto;
     left: 780px;
     display: none;
 }
+
 
 .person5Text1{
     position: absolute;
@@ -320,7 +324,7 @@ body{
 }
 
 /* HOVER TEXT*/
-/* Hovering over person6, text pops up above said persons head.*/
+/* Hovering over "X" person, text pops up above said persons head.*/
 .person6:hover ~ #allText .person6Text{
     background-color: white;
     display: block;
@@ -345,6 +349,7 @@ body{
     text-align: center;
 }
 
+/* platform 26 sign*/
 .platform26Sign{
     position: absolute;
     height: 80px;
@@ -353,13 +358,14 @@ body{
     bottom: 60px;
 }
 
+/* Text over person5 shows when hovering over sign*/
 .platform26Sign:hover ~ #allText .person5Text2{
     background-color: white;
     display: block;
 }
 
 
-/*      NEED FIX
+/*      NEED FIX NOW!
 .ticketImage:hover ~ #allText .person2Text2{
     background-color: white;    
     display: block;

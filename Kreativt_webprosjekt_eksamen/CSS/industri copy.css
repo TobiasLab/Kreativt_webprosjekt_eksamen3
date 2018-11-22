@@ -1,0 +1,218 @@
+body{
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+#mainContainer{
+    position: relative;
+    height: 660px;
+    width: 1300px;
+    background-color: rgb(45, 60, 60);
+    margin: auto;
+    overflow: hidden;
+}
+
+#desertBackground{
+    position: absolute;
+    width: 1300px;
+    bottom: -30px;
+}
+
+#headline{
+    position: absolute;
+    font-size: 70;
+    font-family: snell roundhand;
+    font-weight: 600;
+    color: rgb(150, 150, 50);
+    transform: rotate(10deg);
+    right: 40px;
+    top: 40px;
+    z-index: 4;
+}
+
+#lokomotivTrain{
+    position: absolute;
+    width: 300px;
+    bottom: 30px;
+    left: -300px;
+    animation: lokomotivTrainMove 5s linear 5s forwards;
+}
+
+@keyframes lokomotivTrainMove {
+    0%{
+        bottom: 30px;
+        left: -300px;
+    }
+    25%{
+        bottom: 300px;
+        left: 450px;
+        width: 500px;
+    }
+    75%{
+        bottom: 500px;
+        left: 1200px;
+        width: 700px;
+        transform: rotate(-5deg);
+    }
+    100%{
+        bottom: 700px;
+        left: 1800px;
+        width: 1000px;
+    }
+}
+
+.tracks{
+    position: absolute;
+    width: 170px;
+    z-index: 1;
+    bottom: 160px;
+}
+
+#track1{
+    left: -20px;
+}
+
+#track2{
+    left: 136px;
+}
+
+#track3{
+    left: 293px;
+}
+
+#track4{
+    left: 449px;
+}
+
+#track5{
+    left: 605px;
+}
+
+#track6{
+    left: 762px;
+}
+
+#track7{
+    left: 918px;
+}
+
+#track8{
+    left: 1074px;
+}
+
+#track9{
+    left: 1229px;
+}
+
+#lokomotivContainer{
+    position: absolute;
+    z-index: 2;
+    animation: lokomotivMove 10s linear infinite;
+}
+
+#lokomotiv{
+    position: absolute;
+    width: 300px;
+    bottom: 10px;
+    right: -250px;
+    z-index: 2;
+    
+}
+
+#carriage2{
+    position: absolute;
+    width: 150px;
+    bottom: 20px;
+    left: 350px;
+    z-index: 2;
+}
+
+#carriage1{
+    position: absolute;
+    width: 150px;
+    bottom: 20px;
+    left: 200px;
+    z-index: 2;
+}
+
+
+@keyframes lokomotivMove{
+    0%{
+        bottom: 160px;
+        right: -250px;
+    }
+    25%{
+        bottom: 160px;
+        right: 1100px;
+    }
+    50%{
+        bottom: 160px;
+        right: 1200px;
+    }
+    75%{
+        bottom: 160px;
+        right: 1240px;
+    }
+    100%{
+        bottom: 160px;
+        right: 1800px;
+    }
+}
+
+.trees{
+    position: absolute;
+    width: 170px;
+    z-index: 1;
+    
+}
+
+#tree1{
+    right: 70px;
+    bottom: 90px;
+    z-index: 3;
+}
+
+#tree2{
+    right: 340px;
+    bottom: 220px;
+}
+
+#tree3{
+    right: 560px;
+    bottom: 90px;
+    z-index: 3;
+}
+
+#tree4{
+    left: 350px;
+    bottom: 300px;
+}
+
+#tree5{
+    left: 10px;
+    bottom: 250px;
+}
+
+
+#camel{
+    position: absolute;
+    z-index: 3;
+    width: 100px;
+    bottom: 100px;
+    left: 350px;
+}
+
+#camelTalk{
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    bottom: 150px;
+    left: 145px;
+    z-index: 4;
+    display: none;
+}
+
+span:hover + #camelTalk{
+    display: block;
+}
